@@ -1,0 +1,9 @@
+@import url("~/assets/css/reset.css");
+:root {
+  --header: 52px;
+  --background: #15191f;
+  --text: white;
+  --padding: 12px;
+  /*--ui-bg: var(--background);
+    --ui-text: white;*/
+}
