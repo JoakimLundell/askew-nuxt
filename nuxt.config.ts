@@ -8,6 +8,12 @@ export default defineNuxtConfig({
       database: true,
       asyncContext: true,
     },
+    database: {
+      default: {
+        connector: "sqlite",
+        options: { path: "AskewDB/db.sqlite3" },
+      },
+    },
   },
   modules: ["@pinia/nuxt", "nuxt-toast"],
 });
