@@ -7,6 +7,15 @@
   </div>
 </template>
 
+<script setup>
+import { useAuthStore } from "./store/auth";
+const authStore = useAuthStore();
+
+onBeforeMount(() => {
+  authStore.init();
+});
+</script>
+
 <style>
 html {
   scroll-behavior: smooth;
