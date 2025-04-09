@@ -11,7 +11,7 @@ export default defineNuxtConfig({
     database: {
       default: {
         connector: "sqlite",
-        options: { path: "AskewDB/db.sqlite3" },
+        options: { path: "./AskewDB/db.sqlite3" },
       },
     },
   },
