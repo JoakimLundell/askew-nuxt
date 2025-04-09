@@ -3,4 +3,13 @@ $ npm create nuxt .
 $ npm install
 
 2. Add layout
-3. 
+
+3. Add jsonwebtoken
+$ npm i jsonwebtoken
+
+4. Pinia
+$ npm i pinia @pinia/nuxt
+
+5. Add bcryptjs
+$ npm i bcryptjs
+
