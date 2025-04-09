@@ -2,7 +2,7 @@
   <header>
     <div>chatt</div>
     <div>logo</div>
-    <div>auth</div>
+    <AuthIcons />
   </header>
 </template>
 
@@ -17,5 +17,13 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0 var(--padding);
+}
+
+header > *:first-child,
+header > *:last-child {
+  flex: 1;
+}
+header > *:last-child {
+  justify-content: end;
 }
 </style>
