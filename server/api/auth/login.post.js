@@ -5,15 +5,8 @@ import User from "~/server/models/User";
 
 export default defineEventHandler(async (event) => {
   const body = await readBody(event);
-  //const db = useDatabase();
-  //await connectDB();
-  // Create users table if not exist
-  //await createUsers(db);
 
   // Get user
-  /*const userResponse =
-    await db.sql`SELECT * FROM users WHERE email=${body.email} LIMIT 1`;
-  const user = userResponse.rows[0] || null;*/
   const user = await User.findOne({ email: body.email });
 
   // Check if user exists
@@ -40,7 +33,6 @@ export default defineEventHandler(async (event) => {
   setCookie(event, "askew_token", token);
 
   // Save token on user
-  /*await db.sql`UPDATE users SET token=${token} WHERE id = ${user.id}`;*/
   const filter = { id: user.id };
   const data = {
     token,
@@ -48,7 +40,6 @@ export default defineEventHandler(async (event) => {
   const updatedUser = await User.findOneAndUpdate(filter, data, {
     new: true,
   });
-  console.log("updated user", updatedUser);
 
   // Return
   return {
